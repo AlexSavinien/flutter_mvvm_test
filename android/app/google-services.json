@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "337676524300",
+    "firebase_url": "https://flutter-app-mvvm-riverpod.firebaseio.com",
+    "project_id": "flutter-app-mvvm-riverpod",
+    "storage_bucket": "flutter-app-mvvm-riverpod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337676524300:android:98244a565184301c414729",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337676524300-rbeh59gjk4jgckc2l99s6j7ucg3f7gub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXNf7SSwdS1NpdIxy51ZWwQ_4BmJKomfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337676524300-rbeh59gjk4jgckc2l99s6j7ucg3f7gub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
