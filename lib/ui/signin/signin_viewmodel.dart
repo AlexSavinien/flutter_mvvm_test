@@ -1,12 +1,21 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:stacked_services/stacked_services.dart';
 
-final SignInViewModelProvider = Provider<SignInViewModel>((ref) {
-  return SignInViewModel();
+import '../../services/navigation_service.dart';
+
+final signInViewModelProvider = Provider<SignInViewModel>((ref) {
+  return SignInViewModel(
+    ref.read(navigationServiceProvider),
+  );
 });
 
 class SignInViewModel {
-  void navigateToSignUp(){
-    ExtendedNavigator.root.push('/sign-up-view');
+  final NavigationService _navigationService;
+
+  SignInViewModel(this._navigationService);
+
+  void navigateToSignUp() {
+    _navigationService.navigateTo('/sign-up-view');
   }
 }

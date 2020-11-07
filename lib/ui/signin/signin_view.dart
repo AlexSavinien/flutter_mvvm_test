@@ -11,7 +11,7 @@ class SignInView extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final model = context.read(SignInViewModelProvider);
+    final model = context.read(signInViewModelProvider);
     return Scaffold(
       body: Center(
         child: Column(
@@ -34,9 +34,7 @@ class SignInView extends HookWidget {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {
-                
-              },
+              onPressed: () {},
               child: Text('Log In'),
             ),
             GestureDetector(

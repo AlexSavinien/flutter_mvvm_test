@@ -19,6 +19,7 @@ class SignUpView extends HookWidget {
           children: [
             TextField(
               controller: emailController,
+              keyboardType: TextInputType.emailAddress,
               decoration: kTextFieldInputDecoration.copyWith(
                   hintText: 'Enter your email'),
             ),
@@ -35,7 +36,9 @@ class SignUpView extends HookWidget {
             ),
             ElevatedButton(
               onPressed: () async {
-                await model.signUp(email: emailController.text, password: passwordController.text);
+                await model.signUp(
+                    email: emailController.text,
+                    password: passwordController.text);
               },
               child: Text('Sign Up'),
             ),

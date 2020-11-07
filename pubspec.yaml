@@ -17,7 +17,7 @@ dependencies:
   flutter_hooks: ^0.14.1
   hooks_riverpod: ^0.12.1
   auto_route: ^0.6.9
-
+  stacked_services: 0.5.4+4
   firebase_auth : 0.18.2
   firebase_core : 0.5.1
 
