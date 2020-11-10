@@ -7,8 +7,11 @@ import '../../services/authentification_service.dart';
 import '../../services/navigation_service.dart';
 
 final signUpViewModelProvider = Provider<SignUpViewModel>((ref) {
-  return SignUpViewModel(ref.read(authentificationServiceProvider),
-      ref.read(dialogServiceProvider), ref.read(navigationServiceProvider));
+  return SignUpViewModel(
+      ref.read(authentificationServiceProvider),
+      ref.read(dialogServiceProvider),
+      ref.read(navigationServiceProvider),
+  );
 });
 
 class SignUpViewModel {

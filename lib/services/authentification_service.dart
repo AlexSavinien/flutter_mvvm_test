@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/all.dart';
@@ -8,6 +10,13 @@ final authentificationServiceProvider = Provider<AuthentificationService>((ref) 
 
 class AuthentificationService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  isUserLoggedIn() {
+    var isUserLoggedIn = _auth.authStateChanges().listen((User user) {
+      return user != null;
+    });
+    return isUserLoggedIn;
+  }
 
   Future<String> signUp({@required String email, @required String password}) async {
     try {
