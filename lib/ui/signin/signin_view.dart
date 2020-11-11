@@ -34,7 +34,9 @@ class SignInView extends HookWidget {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                model.signIn(email: emailController.text, password: passwordController.text);
+              },
               child: Text('Log In'),
             ),
             GestureDetector(

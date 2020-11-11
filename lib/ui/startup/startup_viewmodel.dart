@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app/app/router.gr.dart';
 import 'package:flutter_app/services/authentification_service.dart';
 import 'package:flutter_app/services/navigation_service.dart';
@@ -16,6 +17,8 @@ class StartUpViewModel {
   final NavigationService _navigationService;
 
   StartUpViewModel(this._auth, this._navigationService);
+
+  Stream<User> get onAuthChanged => _auth.onAuthStateChanged;
   
   void navigateToHome() {
     _navigationService.navigateTo(Routes.homeView);
@@ -25,9 +28,5 @@ class StartUpViewModel {
     _navigationService.navigateTo(Routes.signInView);
   }
 
-  handleStartUpLogic() {
-    var isUserLoggedIn = _auth.isUserLoggedIn();
-    return isUserLoggedIn;
-  }
 
 }

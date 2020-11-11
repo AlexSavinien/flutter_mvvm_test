@@ -24,10 +24,7 @@ class SignUpViewModel {
 
   // Authentification
   Future signUp({@required String email, @required String password}) async {
-    var resMessage = await _auth.signUp(email: email, password: password);
-    var alertDialog =
-        _alertDialogService.showDialog(title: 'Info', description: resMessage);
-    alertDialog.whenComplete(() => _navigationService.navigateTo('/'));
+    await _auth.signUp(email: email, password: password);
   }
 
   // Navigation
