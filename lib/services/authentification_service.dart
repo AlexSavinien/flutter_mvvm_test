@@ -25,16 +25,12 @@ class AuthentificationService {
 
   Stream<User> get onAuthStateChanged => _auth.authStateChanges();
 
-  getCurrentUser() {
-    try {
-      var user = _auth.currentUser;
-      if(user != null){
-        return user;
-      }
-    } on FirebaseAuthException catch (e) {
-      print(e);
-    }
+  Stream<User> getCurrentUserState() {
+    var user = _auth.authStateChanges();
+    return user;
   }
+
+  User get currentUser => _auth.currentUser;
 
   Future signUp({@required String email, @required String password}) async {
     try {
@@ -47,7 +43,8 @@ class AuthentificationService {
             .whenComplete(
               () => _navigationService.navigateTo('/'),
         );
-       print('User have signed up with this email : $email');
+
+        print('User have signed up with this email : $email');
       } else {
         _dialogService.showDialog(
             title: 'Error',
@@ -61,6 +58,8 @@ class AuthentificationService {
         description: e.message,
       );
     }
+
+
   }
 
   Future signIn({@required String email, @required String password}) async {

@@ -19,7 +19,9 @@ dependencies:
   auto_route: ^0.6.9
   stacked_services: 0.5.4+4
   firebase_auth : 0.18.2
-  firebase_core : 0.5.1
+  firebase_core : 0.5.2
+  cloud_firestore: ^0.14.3
+
 
 dev_dependencies:
   flutter_test:

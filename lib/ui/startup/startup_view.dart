@@ -24,13 +24,5 @@ class StartUpView extends HookWidget {
         );
     },
     );
-    // var hasUserLoggedIn = model.handleStartUpLogic();
-    // if(hasUserLoggedIn) {
-    //   print('User is already logged in');
-    //   return HomeView();
-    // } else {
-    //   print('no user currently logged in');
-    //   return SignInView();
-    // }
   }
 }

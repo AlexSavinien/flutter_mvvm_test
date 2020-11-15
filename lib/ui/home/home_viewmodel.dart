@@ -19,7 +19,7 @@ class HomeViewModel {
   HomeViewModel(this._auth, this._navigationService);
 
   User getCurrentUser(){
-    return _auth.getCurrentUser();
+    return _auth.currentUser;
   }
 
   void signOut(){
