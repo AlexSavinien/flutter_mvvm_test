@@ -5,14 +5,14 @@ import 'package:stacked_services/stacked_services.dart';
 
 import '../../services/navigation_service.dart';
 
-final signInViewModelProvider = Provider<SignInViewModel>((ref) {
+final signInViewModelProvider = ChangeNotifierProvider<SignInViewModel>((ref) {
   return SignInViewModel(
     ref.read(navigationServiceProvider),
     ref.read(authentificationServiceProvider),
   );
 });
 
-class SignInViewModel {
+class SignInViewModel extends ChangeNotifier{
   final NavigationService _navigationService;
   final AuthentificationService _auth;
 

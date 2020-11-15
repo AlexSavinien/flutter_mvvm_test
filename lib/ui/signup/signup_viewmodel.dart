@@ -53,24 +53,10 @@ class SignUpViewModel extends ChangeNotifier {
       print(user.toJson());
       await _firestoreService.addUser(user.toJson());
     } catch (e) {
-      // TODO
+      print(e);
     }
-    // TODO inscrire sur firestore
   }
 
-  // Future test() async {
-  //   Map<String, dynamic> user = User(
-  //     uid: 'myId',
-  //     name: 'myname',
-  //     firstname: 'myfirstname',
-  //     email: 'emaill@mail.com',
-  //     userRole: 'myrole',
-  //   ).toJson();
-  //   print(user);
-  //   await _firestoreService.addUser(user);
-  // }
-
-  // Navigation
   void navigateToSignIn() {
     _navigationService.navigateTo('/');
   }
